@@ -4,6 +4,23 @@ import uk.rob_bolton.rob.gifhack.viewer.*;
 import uk.rob_bolton.rob.gifhack.model.*;
 import uk.rob_bolton.rob.gifhack.controller.*;
 
+/**
+ * This class is used to start the application. It creates an instance of
+ * {@link GifhackModel} and a {@link GifhackController}. A {@link GifhackFrame}
+ * is also created unless the "-c" or "--cli" options are given as arguments.
+ * 
+ * This will create a .gif image using payload and loader scripts which is
+ * both a valid image file and a valid script. The following command-line
+ * arguments are available:
+ * -c, --cli :		Create the program without a GUI.
+ * -i \<file\>, --image \<file\> :		Use \<file\> as the image file.
+ * -p \<file\>, --payload \<file\> :	Use \<file\> as the payload file.
+ * -l \<file\>, --loader \<file\> :		Use \<file\> as the loader file.
+ * -o \<file\>, --output \<file\> :	Save the compiled .gif to \<file\>
+ * 
+ * @author rob bolton
+ *
+ */
 public class main {
 
 	public static void main(String[] args) {
@@ -28,7 +45,7 @@ public class main {
 			{
 				hasGui = false;
 			}
-			if(arg == "-i" || arg == "--input")
+			if(arg == "-i" || arg == "--image")
 			{
 				setMode = 1;
 			}
